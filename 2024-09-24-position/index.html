@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Überschrift</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+        }
+
+        .box-static {
+            position: static;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 150, 255, 0.6);
+        }
+
+        .box-relative {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            width: 180px;
+            height: 120px;
+            background-color: rgba(0, 255, 100, 0.6);
+        }
+
+        .box-absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            width: 200px;
+            height: 130px;
+            background-color: rgba(255, 100, 100, 0.6);
+        }
+
+        .box-fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+            width: 160px;
+            height: 160px;
+            background-color: rgba(150, 50, 200, 0.6);
+        }
+
+        .box-sticky {
+            position: sticky;
+            top: 0px;
+            width: 220px;
+            height: 140px;
+            background-color: rgba(255, 150, 0, 0.6);
+        }
+
+        .container {
+            position: relative;
+            height: 200px;
+            background-color: lightgray;
+            width: 90%;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            width: 80%;
+            margin: 20px auto;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Das ist eine Überschrift!</h1>
+    <div class="sticky-note">
+    </div>
+
+    <div class="box-container">
+        <div class="box box-static">Ich bin eine normale Box.</div>
+        <div class="box box-relative">Ich bin auch eine normale Box aber grün!</div>
+    </div>
+
+    <div class="container">
+        <div class="box box-absolute">Ich bin in einem Balken!</div>
+    </div>
+
+    <div class="box-fixed">
+        Diese Note bleibt auf einer Stelle!
+    </div>
+
+    <div class="box-container">
+        <div class="box box-sticky">
+            Ich komme mit wenn du runterscrollst!
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum risus, et dignissim velit. Curabitur
+            in
+            leo non ipsum sagittis consequat ut in justo.</p>
+        <p>Aenean nec erat quis orci ullamcorper consequat. Nam tincidunt lorem vel nibh scelerisque, sed pulvinar velit
+            efficitur. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+            curae.</p>
+        <p>Ut sollicitudin nisl vel ligula tincidunt, ac pharetra metus efficitur. Quisque ut vehicula libero. Integer
+            sit
+            amet magna a risus tincidunt varius. Sed facilisis, dolor et tristique iaculis, lorem metus malesuada est,
+            nec
+            fermentum dolor odio sed velit.</p>
+        <p>Fusce tristique sollicitudin nisi, sit amet bibendum mi consectetur sit amet. Duis vehicula consectetur mi, a
+            viverra lorem tincidunt a. Integer tempus lorem a pharetra efficitur.</p>
+        <p>Sed fringilla est at magna blandit, quis luctus dolor pellentesque. Mauris in tincidunt velit. Duis interdum
+            ligula et interdum iaculis. Nulla vitae tincidunt leo, sed scelerisque enim.</p>
+        <p>Vivamus congue mi nec enim venenatis, nec fermentum ante condimentum. Maecenas rhoncus suscipit mi at dictum.
+            Duis eu scelerisque velit, sed ultricies urna.</p>
+        <p>Etiam eget risus ac arcu dapibus elementum vel quis nulla. Donec finibus justo id odio finibus, at
+            sollicitudin
+            est gravida. Donec mollis nisi sit amet magna eleifend scelerisque.</p>
+        <p>Praesent aliquam maximus felis. Integer fermentum luctus dictum. Nulla facilisi. Nulla vestibulum odio nec mi
+            tristique, id ultricies dui aliquet. Cras auctor leo quis ex sodales, eget fermentum nunc scelerisque.</p>
+    </div>
+</body>
+
+</html>

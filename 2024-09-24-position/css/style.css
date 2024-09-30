@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 15px;
+}
+
+.sticky-note {
+    position: sticky;
+    top: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px dashed black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
