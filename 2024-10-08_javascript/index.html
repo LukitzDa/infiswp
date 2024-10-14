@@ -1,13 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Überschrift</title>
+    <title>Simpsons - Tabelle und Uhr</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <h1>Ubahn: Fahrplan</h1>
+
+    <table class="table table-bordered">
+        <caption><strong>U-Bahn - Fahrplan - Line U1 bis U4 - Montag bis Freitag</strong></caption>
+        <thead>
+            <tr>
+                <th>Linie</th>
+                <th>Montag</th>
+                <th>Dienstag</th>
+                <th>Mittwoch</th>
+                <th>Donnerstag</th>
+                <th>Freitag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>U1</td>
+                <td>08:00</td>
+                <td>09:00</td>
+                <td>08:30</td>
+                <td>10:00</td>
+                <td>09:30</td>
+            </tr>
+            <tr>
+                <td>U2</td>
+                <td>08:00</td>
+                <td>07:30</td>
+                <td>07:00</td>
+                <td>08:30</td>
+                <td>09:00</td>
+            </tr>
+            <tr>
+                <td>U3</td>
+                <td>08:00</td>
+                <td>09:30</td>
+                <td>09:00</td>
+                <td>07:00</td>
+                <td>07:30</td>
+            </tr>
+            <tr>
+                <td>U4</td>
+                <td>08:00</td>
+                <td>07:30</td>
+                <td>10:00</td>
+                <td>09:00</td>
+                <td>08:30</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Die U-Bahn Linie in Wien ist ein Untergrundzug, welcher Sie schnell zu Ihrem Ziel
+                    bringen kann.</td>
+            </tr>
+            <tr>
+                <td colspan="6">Und mit einem sehr lesbaren Plan Sie zu jedem Ort in Wien führen kann.</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Uhrzeit</h2>
+    <div id="clock" class="mb-3">00:00:00</div>
+    <div class="btn-group">
+        <button class="btn btn-primary" onclick="startWatch()">Start Watch</button>
+        <button class="btn btn-secondary" onclick="stopWatch()">Stop Watch</button>
+    </div>
+
+    <script>
+        let watchInterval;
+        let isPaused = false;
+        let lastTime;
+
+        function updateClock() {
+            const now = new Date();
+            lastTime = now.toLocaleTimeString();
+            document.getElementById("clock").textContent = lastTime;
+        }
+
+        function startWatch() {
+            if (!isPaused) {
+                updateClock();
+                watchInterval = setInterval(updateClock, 1000);
+            }
+            isPaused = false;
+        }
+
+        function stopWatch() {
+            clearInterval(watchInterval);
+            isPaused = true;
+            document.getElementById("clock").textContent = lastTime;
+        }
+    </script>
 
 </body>
 
