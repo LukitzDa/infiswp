@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORF-Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .header-logo img {
+            width: 40%;
+        }
+
+        .viennale-logo img {
+            width: 120%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #424f5e;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .accordion {
+            margin-top: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .accordion-header {
+            background: #424f5e;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin: 5px 0;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .accordion-content {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://orf.at/">Fernsehen</a></li>
+            <li><a href="https://orf.at">ORF ON</a></li>
+            <li><a href="https://orf.at">Sound</a></li>
+            <li><a href="https://orf.at">Topos</a></li>
+            <li><a href="https://orf.at">Debatte</a></li>
+            <li><a href="https://orf.at">Österreich</a></li>
+            <li><a href="https://orf.at">Wetter</a></li>
+            <li><a href="https://orf.at">Sport</a></li>
+        </ul>
+    </nav>
+    <p>_________________________________________________________________________________________________</p>
+
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="https://orf.at/">
+                <img src="https://www.tieraerztekammer.at/fileadmin/daten/_processed_/7/1/csm_ORF.AT_LOGO_f7627ac07c.jpg"
+                    alt="ORF Logo" class="orf-logo">
+            </a>
+        </div>
+        <div class="viennale-logo">
+            <a href="https://orf.at/">
+                <img src="https://assets.orf.at/flags/339.svg?_m=1728982733418" alt="Viennale" class="viennale-logo">
+            </a>
+        </div>
+    </div>
+
+    <h2>News</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/27/98/crops/w=171,q=90,r=1/2394244_1k_862598_pilz6.jpg?s=d96282d5d5cfb063f1b268e3faf70f8d2bd88d18"
+                    alt="Bild 1">
+                <p>"Spitzelaffäre": Geldstrafe für Pilz</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/43/60/crops/w=347,q=90,r=1/2394221_2q_914960_us_wahl_musk_afp.jpg?s=a3a213eaa9a4479a54b99ea8feaa6b9bd88a5da4"
+                    alt="Bild 2">
+                <p>Wählerfang mit Millionen: Kritik an Musk</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/42/59/crops/w=171,q=90,r=1/2387488_1k_912159_ski_alpin_shiffrin_vor_saison_gruebeln_g.jpg?s=20cbdb3766aaab69a9f2c4b094c5ed00e6abe77c"
+                    alt="Bild 3">
+                <p>Shiffrin grübelt über Leben nach Sport</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/42/36/crops/w=171,q=90,r=1/2390358_1k_913336_uno_biodiversitaetskonferenz_pilze_vorschau_gy.jpg?s=9f7d084713559e6e6338caebf8df2e4680618b08"
+                    alt="Bild 4">
+                <p>Pilze sollen eigenen Status bekommen</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/43/25/crops/w=171,q=90,r=1/2394090_1k_914925_nr_wahl_van_der_bellen_parteichefs_pv_a.jpg?s=0e57d562f5967fae45f8b967416dce2917233513"
+                    alt="Bild 5">
+                <p>Parteichefs zu Gesprächen in Hofburg</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://orf.at">
+                <img src="https://assets.orf.at/mims/2024/43/29/crops/w=171,q=90,r=1/2394127_2h_914929_nahost_israel_beirut_finanzstruktur_ap.jpg?s=f7cc68e15234f7b91580bb34a092939aacdb22cb"
+                    alt="Bild 6">
+                <p>Finanzstruktur der Hisbollah angegriffen</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header"
+                onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                Ukraine-Krieg - NATO warnt Nordkorea vor Truppen für Russland
+            </div>
+            <div class="accordion-content">
+                <p>Der Ukraine-Konflikt hat eine neue Dimension erreicht, da ukrainische Behörden Berichte bestätigen,
+                    dass Russland plant, bis zu 10.000 nordkoreanische Soldaten zur Unterstützung seiner Truppen zu
+                    deployen. Präsident Zelensky warnte, dass dies die Gefahr einer Eskalation des Konflikts zu einem
+                    weltweiten Krieg erhöht​.
+                    neralsekretär Jens Stoltenberg hat ebenfalls betont, dass eine solche Maßnahme eine "signifikante
+                    Eskalation" darstellen würde und warnte Nordkorea vor den möglichen Konsequenzen.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header"
+                onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                Selenskyjs Dilemma mit der Mobilisierung
+            </div>
+            <div class="accordion-content">
+                <p>Präsident Selenskyj steht vor einem Dilemma bei der Mobilisierung von Truppen, da die öffentliche
+                    Unterstützung nach Monaten des Krieges abnimmt. Während anfangs viele Ukrainer bereit waren, sich zu
+                    melden, haben Erschöpfung und Militärskandale die Bereitschaft, zu kämpfen, verringert. Der
+                    Gesetzesentwurf zur Mobilisierung wird als politisch heikel angesehen, und es gibt Bedenken
+                    hinsichtlich möglicher Verfassungswidrigkeiten und Korruption​.
+                    Zusätzlich zur Mobilisierung muss Selenskyj die wirtschaftlichen Folgen berücksichtigen, da ein
+                    erheblicher Teil des Budgets für den Krieg aufgewendet wird. Ein zusätzlicher Mobilisierungsbedarf
+                    könnte die Wirtschaft belasten, was zu politischen Schwierigkeiten führen könnte​.
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header"
+                onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                Sport
+            </div>
+            <div class="accordion-content">
+                <p>Die World Series zwischen den New York Yankees und den Los Angeles Dodgers findet statt. Diese
+                    Begegnung, die am 25. Oktober 2024 beginnt, ist historisch, da es das erste Aufeinandertreffen
+                    dieser beiden ikonischen Teams seit 1981 ist. Die Yankees und Dodgers zählen zu den erfolgreichsten
+                    und bekanntesten Franchises im Baseball, was die bevorstehende Serie zu einem Must-Watch-Ereignis
+                    macht. Die Spannung steigt, da beide Teams eine starke Saison hinter sich haben.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header"
+                onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                Fußball - Fußballerinnen protestieren gegen FIFA-Saudi-Deal
+            </div>
+            <div class="accordion-content">
+                <p>Über 100 professionelle Fußballerinnen haben einen offenen Brief an die FIFA gerichtet und fordern
+                    die Beendigung der Partnerschaft mit Saudi Aramco, einem Unternehmen des saudischen Staates. Unter
+                    den Unterzeichnerinnen sind prominente Spielerinnen wie Jessie Fleming und Becky Sauerbrunn. Sie
+                    kritisieren den Deal als eine Art "Sportswashing", das die Menschenrechtslage in Saudi-Arabien
+                    ignoriert, insbesondere die Diskriminierung von Frauen und LGBTQ+-Personen.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header"
+                onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                Religion - Ärger bei Weltsynode um Rolle von Frauen
+            </div>
+            <div class="accordion-content">
+                <p>Bei der aktuellen Weltsynode der katholischen Kirche, die im Oktober 2024 stattfindet, gibt es
+                    erhebliche Spannungen bezüglich der Rolle von Frauen. Über 54 weibliche Delegierte, auch
+                    "Synodenmütter" genannt, sind anwesend und fordern eine stärkere Einbeziehung von Frauen in
+                    kirchliche Ämter, insbesondere die Ordination von Frauen in den Diakonat.
+
+                    Trotz des Drucks aus der Basis hat der Vatikan angedeutet, dass diese Themen nicht prioritär
+                    behandelt werden, was zu Frustration führt. Kritiker befürchten, dass die Synode nicht die
+                    gewünschten Veränderungen bringen wird, obwohl es einen wachsenden Wunsch nach Gleichstellung in der
+                    Kirche gibt.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+
+</html>
