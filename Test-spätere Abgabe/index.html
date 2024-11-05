@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .header-logo img {
+            width: 40%;
+        }
+
+        .viennale-logo img {
+            width: 120%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #EBFAF0;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .accordion {
+            margin-top: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .accordion-header {
+            background: #3A9773;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin: 5px 0;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .accordion-content {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .header-logo img {
+            width: 40%;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .main-card {
+            width: 250px;
+            padding: 20px;
+            background-color: #EBFAF0;
+            border: 2px solid #3A9773;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sub-card {
+            padding: 10px;
+            background-color: #EBFAF0;
+            border: 2px solid #3A9773;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .sub-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-text {
+            flex-direction: row;
+            width: 200px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><strong>Pulse</strong></h1>
+    <nav>
+        <ul>
+            <li><a href="https://pulseapp.com/pricing">Features</a></li>
+            <li><a href="https://pulseapp.com/pricing">Customer Stories</a></li>
+            <li><a href="https://pulseapp.com/pricing">Pricing</a></li>
+            <li><a href="https://pulseapp.com/pricing">Blog</a></li>
+            <li><a href="https://pulseapp.com/pricing">Sign up</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <h2><strong>Try Pulse free for 30 days.</strong></h2>
+        <h3>See why Pulse is the best way to monitor your cash flow.</h3>
+        <h3>Sign up for any plan and try Pulse absolutely free for 30 days.</h3>
+        <div class="card-container">
+
+            <div class="main-card">
+                <h4><strong>Small Business Plan</strong></h4>
+                <h5>59$ per month</h5>
+                <div class="sub-card">
+                    <a href="https://pulseapp.com/pricing">Sign up now</a>
+                </div>
+            </div>
+
+            <div class="main-card">
+                <h4>Unlock Extra Features</h4>
+                <h5>89$ per month</h5>
+                <div class="sub-card">
+                    <a href="https://pulseapp.com/pricing">Try Premium</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="left-text">
+            <h6>These are what we call the Pulse Basics. They’re what every customer gets</h6>
+            <p>- Manage cash flow on a daily, weekly, monthly, or yearly basis
+                - Forecast growth with recurring Income or expenses that scale dramatically
+                - Works with any currency
+                - See Money In and Money Out, categorize transactions, and run
+                helpful reports
+                - Toggle entries and accounts and off to game out different secenarios
+
+                Just need the Pulse Basics?
+                Get them now for $29 per month</p>
+        </div>
+
+
+    </nav>
+</body>
+
+</html>

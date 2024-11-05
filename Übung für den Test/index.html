@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube ähnliche Webseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <a class="btn" href="https://www.youtube.com" target="_blank">Knopf 1</a>
+            <a class="btn" href="https://www.youtube.com" target="_blank">Knopf 2</a>
+            <a class="btn" href="https://www.youtube.com" target="_blank">Knopf 3</a>
+            <a class="btn" href="https://www.youtube.com" target="_blank">Knopf 4</a>
+        </div>
+
+
+        <div class="main-content">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Suchen...">
+                <button id="mode-toggle" onclick="toggleMode()">🌙</button>
+            </div>
+
+
+            <div class="video-grid">
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 1">
+                    <div class="video-title">Videotitel 1</div>
+                </a>
+
+
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 2">
+                    <div class="video-title">Videotitel 2</div>
+                </a>
+
+
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 3">
+                    <div class="video-title">Videotitel 3</div>
+                </a>
+
+
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 4">
+                    <div class="video-title">Videotitel 4</div>
+                </a>
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 5">
+                    <div class="video-title">Videotitel 5</div>
+                </a>
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 6">
+                    <div class="video-title">Videotitel 6</div>
+                </a>
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 7">
+                    <div class="video-title">Videotitel 7</div>
+                </a>
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 8">
+                    <div class="video-title">Videotitel 8</div>
+                </a>
+                <a class="video" href="https://www.youtube.com" target="_blank">
+                    <img src="BILD_URL_HIER" alt="Video Bild 9">
+                    <div class="video-title">Videotitel 9</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const modeToggleBtn = document.getElementById('mode-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggleBtn.textContent = '☀️';
+            } else {
+                modeToggleBtn.textContent = '🌙';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
