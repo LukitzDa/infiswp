@@ -97,8 +97,7 @@ table {
 }
 
 img {
-    width: 80%;
-    height: auto;
+    width: 100%;
     border-radius: 8px;
 }
 
@@ -106,9 +105,7 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    /* Abstand zwischen den Karten */
     max-width: 800px;
-    /* Maximale Breite */
     width: 100%;
     margin: 16px 0;
 }
