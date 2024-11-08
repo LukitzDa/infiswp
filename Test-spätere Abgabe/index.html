@@ -9,239 +9,274 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 16px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h3 {
-            margin: 0 0 8px 0;
-        }
-
-        .card p {
             margin: 0;
+            padding: 0;
+            background-color: #EBFAF0;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .gallery-item {
-            text-align: center;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .header-logo img {
-            width: 40%;
-        }
-
-        .viennale-logo img {
-            width: 120%;
+        header,
+        main,
+        footer {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
 
         nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 10px;
+            background-color: #EBFAF0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border: 4px solid #28A06F;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #31c589;
+            color: #000000;
+        }
+
+        .main-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #28A06F;
+            color: white;
+            width: 683px;
+        }
+
+        .main-header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header h2,
+        header h3 {
+            text-align: center;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+        }
+
+        .main-header h3 {
+            font-size: 1.3em;
+            color: #28A06F;
+            margin-top: 10px;
+        }
+
+        .pricing-section {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .text-section {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .pricing-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            border: 2px solid #3A9773;
+        }
+
+        .pricing-card h3 {
+            color: #28A06F;
+        }
+
+        .pricing-card h4 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #3A9773;
+        }
+
+        .pricing-card .cta-btn {
+            background-color: #28A06F;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .pricing-card .cta-btn:hover {
+            background-color: #31c589;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
             list-style-type: none;
             padding: 0;
         }
 
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #EBFAF0;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .accordion {
-            margin-top: 20px;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .accordion-header {
-            background: #3A9773;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            margin: 5px 0;
-            border-radius: 4px;
+        ul li {
             text-align: left;
-        }
-
-        .accordion-content {
-            background-color: #ffffff;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .gallery-item {
-            text-align: center;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .header-logo img {
-            width: 40%;
-        }
-
-        .card-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
-        }
-
-        .main-card {
-            width: 250px;
-            padding: 20px;
-            background-color: #EBFAF0;
-            border: 2px solid #3A9773;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .sub-card {
-            padding: 10px;
-            background-color: #EBFAF0;
-            border: 2px solid #3A9773;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            color: #000000;
-        }
-
-        .sub-card a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        .left-text {
-            flex-direction: row;
-            width: 200px;
-            font-size: 16px;
+            font-size: 1em;
         }
     </style>
 </head>
 
 <body>
-    <h1><strong>Pulse</strong></h1>
+
+    <header class="main-header">
+        <h1><strong>Pulse</strong></h1>
+
+    </header>
+
     <nav>
         <ul>
             <li><a href="https://pulseapp.com/pricing">Features</a></li>
             <li><a href="https://pulseapp.com/pricing">Customer Stories</a></li>
             <li><a href="https://pulseapp.com/pricing">Pricing</a></li>
             <li><a href="https://pulseapp.com/pricing">Blog</a></li>
-            <li><a href="https://pulseapp.com/pricing">Sign up</a></li>
+            <li><a href="https://pulseapp.com/pricing">Sign Up</a></li>
         </ul>
     </nav>
-    <nav>
+    <header>
         <h2><strong>Try Pulse free for 30 days.</strong></h2>
-        <h3>See why Pulse is the best way to monitor your cash flow.</h3>
-        <h3>Sign up for any plan and try Pulse absolutely free for 30 days.</h3>
-        <div class="card-container">
+        <h3>See why Pulse is the best way to monitor your cash flow</h3>
+    </header>
 
-            <div class="main-card">
-                <h4><strong>Small Business Plan</strong></h4>
-                <h5>59$ per month</h5>
-                <div class="sub-card">
-                    <a href="https://pulseapp.com/pricing">Sign up now</a>
-                </div>
+    <main>
+        <section class="pricing-section">
+            <div class="text-section">
+                <h3>These are what we call the Pulse Basics. They’re what every customer gets:</h3>
+                <ul>
+                    <li>Manage cash flow on a daily, weekly, monthly, or yearly basis</li>
+                    <li>Forecast growth with recurring income or expenses that scale dramatically</li>
+                    <li>Works with any currency</li>
+                    <li>See Money In and Money Out, categorize transactions, and run helpful reports</li>
+                    <li>Toggle entries and accounts to game out different scenarios</li>
+                </ul>
             </div>
 
-            <div class="main-card">
-                <h4>Unlock Extra Features</h4>
-                <h5>89$ per month</h5>
-                <div class="sub-card">
-                    <a href="https://pulseapp.com/pricing">Try Premium</a>
-                </div>
+            <div class="pricing-card">
+                <h3>Small Business Plan</h3>
+                <h4>$59 per month</h4>
+                <p>- Manage cash flow across multiple financial accounts</p>
+                <p>- Invite your investors, book kepper, or management team to see reports or manage cash flow</p>
+                <p>- Integrate with Quickbooks Online for more accurate cash flow</p>
+                <p>- Track your actual cash flow alongside your projected cash flow</p>
+                <a href="https://pulseapp.com/pricing" class="cta-btn">Sign Up Now</a>
             </div>
 
+            <div class="pricing-card">
+                <h3>Unlock Extra Features</h3>
+                <h4>$89 per month</h4>
+                <p>Manage cash flow across unlimited financial accounts</p>
+                <p>Convert to any currency for localized cash flow reporting and projections</p>
+                <p>Attach invoices or contracts to your cash flow entries for accountability and auditing</p>
+                <a href="https://pulseapp.com/pricing" class="cta-btn">Try Premium</a>
+            </div>
+        </section>
+        <div class="text-section">
+            <h1>FAQ</h1>
+            <h3>How does the 30-day free trial work?</h3>
+            <ul>
+                <li>You can use Pulse absolutely free for 30 days. After 30 days, we will charge the credit card you
+                    used when you sign up. If you choose to cancel your account before your trial ends, your card will
+                    not be charged.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
         </div>
-        <div class="left-text">
-            <h6>These are what we call the Pulse Basics. They’re what every customer gets</h6>
-            <p>- Manage cash flow on a daily, weekly, monthly, or yearly basis
-                - Forecast growth with recurring Income or expenses that scale dramatically
-                - Works with any currency
-                - See Money In and Money Out, categorize transactions, and run
-                helpful reports
-                - Toggle entries and accounts and off to game out different secenarios
+        <div class="text-section">
+            <h3>If I upgrade an existing account, do I get another free trial?</h3>
+            <ul>
+                <li>Brand new accounts are the only ones eligible for a 30-day free trial. If you upgrade an existing
+                    account, your credit card will be billed the new amount on the date of your next billing cycle.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
+        </div>
+        <div class="text-section">
+            <h3>What is a “Financial Account”?</h3>
+            <ul>
+                <li>Financial Accounts are a grouping of income and expense items that can be used for tracking or
+                    reporting purposes.
 
-                Just need the Pulse Basics?
-                Get them now for $29 per month</p>
+                    They’re designed to be flexible and can be used to differentiate between bank accounts, companies,
+                    individuals or between personal and business entries.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
+        </div>
+        <div class="text-section">
+            <h3>Do I have to commit to a long-term contract?</h3>
+            <ul>
+                <li>No. There is no contract when you use Pulse, other than agreeing to our Terms of Service.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
+        </div>
+        <div class="text-section">
+            <h3>Will I be able to cancel my account if I don’t use Pulse?</h3>
+            <ul>
+                <li>Yes – you can cancel your account at any time. To cancel your account, go to your billing page and
+                    click on “Please cancel my account” at the bottom of the page. The account owner is the only one who
+                    can cancel an account. An email request to delete an account is not considered cancellation.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
+        </div>
+        <div class="text-section">
+            <h3>What types of payments do you accept?</h3>
+            <ul>
+                <li>We accept payments made online using Visa, Mastercard, Discover, and American Express.</li>
+                <li>_______________________________________________________________________________________________________
+                </li>
+            </ul>
         </div>
 
+    </main>
 
-    </nav>
+    <footer>
+        <main>
+            <a href="https://pulseapp.com/pricing" class="cta-btn">Sign Up for a Free 30-Day Trial</a>
+        </main>
+        <p>&copy; 2024 Pulse, Inc. All rights reserved.</p>
+        <p>
+            <a href="https://pulseapp.com/pricing">Privacy Policy</a> |
+            <a href="https://pulseapp.com/pricing">Terms of Service</a>
+        </p>
+    </footer>
+
 </body>
 
 </html>
