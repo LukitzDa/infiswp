@@ -1,4 +1,4 @@
-Leetcode 2 Aufgaben
+Leetcode 2 Aufgaben- bis 4.3.2025
 
 Aufgabe 6 Replace Employee ID With The Unique Identifier:
 SELECT unique_id, name
