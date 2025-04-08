@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz</h1>
+    <div class="quiz-box">
+      <p class="question">Wieviele Einwohner hat Wien?</p>
+      <form id="quiz-form">
+        <ul class="answers">
+          <li>
+            <label>
+              <input type="radio" name="answer" value="1,9 Millionen">
+              1,9 Millionen
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer" value="500.000">
+              500.000
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer" value="3 Millionen">
+              3 Millionen
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer" value="800.000">
+              800.000
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer" value="2,5 Millionen">
+              2,5 Millionen
+            </label>
+          </li>
+        </ul>
+        <button type="button" id="submit-btn">Antworten</button>
+      </form>
+      <div id="result-box" class="hidden"></div>
+    </div>
+  </div>
+
+  <script>
+    const correctAnswer = "1,9 Millionen";
+    const submitBtn = document.getElementById("submit-btn");
+    const resultBox = document.getElementById("result-box");
+
+    submitBtn.addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+
+      if (!selected) {
+        resultBox.textContent = "Bitte wähle eine Antwort aus!";
+        resultBox.className = "result warning";
+        return;
+      }
+
+      if (selected.value === correctAnswer) {
+        resultBox.textContent = "Richtig! 🎉";
+        resultBox.className = "result correct";
+      } else {
+        resultBox.textContent = "Falsch 😢 Die richtige Antwort ist: 1,9 Millionen";
+        resultBox.className = "result wrong";
+      }
+    });
+  </script>
+</body>
+</html>
